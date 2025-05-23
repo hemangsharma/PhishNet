@@ -1,0 +1,18 @@
+Algorithm,Type,Best Use Case,Key Formula / Logic,Assumptions,Pros,Cons,When NOT to Use,Real-World Example
+Linear Regression,Supervised,Predicting continuous values,Y = b0 + b1X + b2X² + ...,"Linearity, independence","Simple, interpretable, fast","Sensitive to outliers, non-linear limits",Data with strong non-linearity,House price prediction
+Logistic Regression,Supervised,Binary classification,P = 1 / (1 + e^-(b0 + b1X + ...)),Log-odds linearity,"Probabilistic, interpretable",Weak with non-linear boundaries,Data is highly non-linear,Spam detection
+Decision Tree,Supervised,Classification / Regression,Recursive binary split,None,Easy to interpret,"Overfitting, unstable",Noisy or complex datasets,Loan default prediction
+Random Forest,Supervised,Ensemble accuracy,Bagging + averaging trees,Tree independence,"High accuracy, robust","Slower, less interpretable",Need real-time results,Fraud detection
+Gradient Boosting,Supervised,High-performance modeling,Additive trees minimizing loss,Sequential dependency,State-of-the-art accuracy,"Overfitting, needs tuning",When interpretability matters,Credit scoring
+SVM,Supervised,Max-margin classification,Maximize margin using support vectors,"Separability, scaling",Works in high-dim spaces,Slow on large datasets,Large noisy datasets,Facial recognition
+KNN,Supervised,Few-shot classification,Distance-based majority vote,Feature scaling,"Simple, no training phase","Slow, noisy sensitive",High-dimensional noisy data,Recommender systems
+Naive Bayes,Supervised,Text classification,Bayes theorem + feature independence,Independent features,"Fast, good with text data",Fails with correlated features,Feature dependency present,Sentiment analysis
+K-Means,Unsupervised,Customer segmentation,Minimize intra-cluster distance,"Spherical, equal clusters","Fast, easy to implement","Needs K, sensitive to shape",Non-spherical data,Customer segmentation
+Hierarchical Clustering,Unsupervised,Data structure understanding,Nested dendrogram,Distance metric,"No need for K, visual",Memory and compute costly,Very large datasets,Gene expression analysis
+PCA,Dim. Reduction,Reducing feature dimensionality,Eigenvectors of covariance matrix,Large variance important,"Noise reduction, speed-up",Hard to interpret,All features are important,Image compression
+Neural Networks (MLP),Supervised,Complex pattern modeling,Weighted sums + activation functions,"Enough data, scaling",Non-linear learning power,"Needs large data, tuning","Small data, low compute",Image classification
+CNN,Supervised,Image/video/spatial data,Convolution + pooling layers,Grid-like spatial data,Excellent for images,High resource demand,Sequence/text data,Self-driving vision
+RNN,Supervised,Sequence modeling,Feedback loops over time,Sequential structure,Time-series & text ready,Vanishing gradient,Long sequences,Stock prediction
+"Transformer (BERT, GPT)",Supervised/Self,"NLP tasks, translation",Attention mechanism + position encoding,Large training data,"Long context, fast","Heavy compute, large model",Small projects,"ChatGPT, Translation tools"
+Autoencoders,Unsupervised,Compression & anomaly detection,Encoder-decoder + reconstruction loss,Symmetric network,Effective denoising,"Can overfit, black-box",When no compression needed,Fraud detection
+DBSCAN,Unsupervised,Arbitrary shape clustering,Density-based region growing,Cluster density,"Noise tolerant, shape-flexible",Fails on varying density,Varying density data,Noise detection
