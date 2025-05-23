@@ -38,6 +38,44 @@
   - False positive/negative rates
   - Escalation patterns
 
+## Project Structure
+
+phishnet/
+│
+├── README.md
+├── proposal.pdf
+├── requirements.txt
+├── mobile-app/
+│   └── flutter/               # Flutter mobile/watch UI
+│       ├── lib/
+│       ├── assets/
+│       └── test/
+│
+├── edge-model/
+│   ├── training/
+│   │   ├── train.py           # Training script for TinyML model
+│   │   └── dataset.py         # Dataset preprocessing
+│   ├── onnx/
+│   │   └── model.onnx         # Exported and quantized model
+│   └── inference/
+│       └── infer.py           # Lightweight inference script
+│
+├── cloud-api/
+│   ├── app/
+│   │   ├── main.py            # FastAPI app
+│   │   ├── model_handler.py   # Large model interface
+│   │   ├── routes/
+│   │   └── db.py              # DB connector
+│   └── Dockerfile
+│
+├── analytics/
+│   ├── dashboard.py           # Streamlit app
+│   └── data_processing.py
+│
+└── data/
+    └── emails.csv             # Labeled phishing dataset
+
+
 ## Getting Started
 
 ### 1. Clone the repository:
