@@ -39,7 +39,7 @@
   - Escalation patterns
 
 ## Project Structure
-
+```bash
 phishnet/
 │
 ├── README.md
@@ -74,7 +74,7 @@ phishnet/
 │
 └── data/
     └── emails.csv             # Labeled phishing dataset
-
+```
 
 ## Getting Started
 
